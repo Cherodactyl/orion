@@ -36,7 +36,7 @@ client.on("messageCreate", async (message) => {
   const userMessage = message.content.trim();
 
   // Trigger only if message starts with "orion"
-  if (!userMessage.toLowerCase().startsWith("orion")) return;
+  if (!userMessage.toLowerCase().includes("orion")) return;
 
   // Cooldown lock
   if (replyLock.has(userId)) return;
